@@ -1,0 +1,52 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+	<meta charset="utf-8" />
+    <link type="text/css" rel="stylesheet" href="style/indexStyle.css"/>
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <script src="jquery-3.2.1.js"></script>
+    <script src="jquery.cookie.js"></script>
+    <script type="text/javascript">
+        $(document).ready(function () {
+            $('#btnsubmit').bind("click", function () {
+                $.cookie("name", $('#txtname').val());
+                //window.location.replace("home.html")
+                $(location).attr('href', 'home.html');
+            });
+        });
+    </script>
+</head>
+<body>
+    
+    
+    <div id="container">
+        
+       </br></br>
+        <center>
+            <span style="color:orangered;font-size:90px;position:center"> Hii Dear</span></br>
+            
+            <span class="blink_text" style="color:yellow;font-size:30px">Please enter your name and Mobile Number</span>
+        </center>
+        </br>
+        <div id="main">
+            <div id="mainleft">
+                Name:
+                </br></br>
+                Mob:
+            </div>
+            <div id="mainright">
+                <input type="text" size="25" id="txtname"></br></br>
+                <input type="text" size="25" name="txtmob">
+            </div>
+            <center>
+            <input type="button" id="btnsubmit" value="Submit" style="border-radius:10px;background-color: deepskyblue;font-size:20px">
+            </center>
+        </div>
+        
+        <div id="footer">
+
+        </div>
+    </div>
+</body>
+</html>

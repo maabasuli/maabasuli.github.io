@@ -1,0 +1,56 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+    
+	<meta charset="utf-8" />
+    <link type="text/css" rel="stylesheet" href="style/indexStyle.css" />
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <script src="jquery-3.2.1.js"></script>
+    <script src="jquery.cookie.js"></script>
+    <script type="text/javascript">
+        
+        $(document).ready(function () {
+            if ($.cookie("name") != null) {
+                
+                var data = $.cookie("name");
+                $('#spanname').html(data);
+                $.removeCookie("name");
+            }
+        });
+
+    </script>
+</head>
+<body>
+    <!--<audio autoplay hidden>
+        <source src="jingle.mp3" type="audio/mpeg">
+        If you're reading this, audio isn't supported.
+    </audio>-->
+    <div id="containerHome">
+        <div id="header">
+           <div id="headerleft">
+             <img src="image/fire.gif">
+           </div>
+            <div id="headercenter">
+                <img src="image/logo.png">
+            </div>
+
+           <div id="headerright">
+               <img src="image/fire.gif">
+           </div>
+        </div>
+        <div id="name">
+                <center>
+                <span id="spanname" style="font-family:Copperplate Gothic Bold;font-size:50px;color:yellow;align-content:center"></span>
+                </center>
+        </div>
+        <div id="msg">
+            <center>
+
+            <span style="color: darkcyan;font-size:30px;font-family:Showcard Gothic">Wishing You & Your family</span></br>
+            <h1>Happy New Year</h1>
+            </center>
+        </div>
+    </div>
+</body>
+</html>
